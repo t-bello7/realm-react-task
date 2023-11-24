@@ -47,7 +47,6 @@ const router = createBrowserRouter([
  * for instantiation an Atlas App Services App.
  */
 function App() {
-  console.log(process.env.REACT_APP_ATLAS_APP_ID)
   return (
     <div className={styles.container}>
       <AppProvider id={`${process.env.REACT_APP_ATLAS_APP_ID}`}>
