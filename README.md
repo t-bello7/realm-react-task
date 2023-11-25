@@ -1,4 +1,4 @@
-# An Offline-First Todo List App Using Atlas Device SDK for Web
+# An Offline-First Todo List App Using Atlas Device SDK (previously Realm) for Web
 
 A React todo list (task manager) app showcasing how to create, read, update, and delete data while offline using [MongoDB's Atlas Device SDK for Web](https://www.mongodb.com/docs/realm/web/sync/) (fka Realm).
 
