@@ -16,14 +16,21 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-import { Results } from 'realm';
+// import { Results } from 'realm';
 
-import type { Task } from '../models/Task';
+// import type { Task } from '../models/Task';
 import { TaskItem } from './TaskItem';
 import styles from '../styles/TaskList.module.css';
 
+interface Task {
+  _id: string,
+  description: string;
+  isComplete: boolean;
+
+}
 type TaskListProps = {
-  tasks: Results<Task>;
+  // tasks: Results<Task>;
+  tasks: Task[];
   onToggleTaskStatus: (task: Task) => void;
   onDeleteTask: (task: Task) => void;
 };
@@ -36,7 +43,7 @@ export function TaskList({ tasks, onToggleTaskStatus, onDeleteTask }: TaskListPr
     <div className={styles.tasks}>
       {tasks.map((task) => (
         <TaskItem
-          key={task._id.toHexString()}
+          key={task._id}
           task={task}
           onToggleStatus={onToggleTaskStatus}
           onDelete={onDeleteTask}

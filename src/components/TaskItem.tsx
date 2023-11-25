@@ -16,9 +16,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-import type { Task } from '../models/Task';
+// import type { Task } from '../models/Task';
 import styles from '../styles/TaskItem.module.css';
 
+interface Task {
+  _id: string,
+  description: string;
+  isComplete: boolean;
+}
 type TaskItemProps = {
   task: Task;
   onToggleStatus: (task: Task) => void;

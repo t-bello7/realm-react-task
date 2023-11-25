@@ -16,7 +16,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-import { useApp, useAuth } from '@realm/react';
+// import { useApp, useAuth } from '@realm/react';
 
 import styles from '../styles/NavBar.module.css';
 
@@ -24,16 +24,16 @@ import styles from '../styles/NavBar.module.css';
  * Nav bar providing a button for logging out.
  */
 export function NavBar() {
-  const app = useApp();
-  const { logOut } = useAuth();
+  // const app = useApp();
+  // const { logOut } = useAuth();
 
   return (
     <nav className={styles.nav}>
       <div className={styles.titleContainer}>
-        <p className={styles.title}>{app.currentUser?.profile.email}</p>
-        <p className={styles.info}>{`App ID: ${app.id}`}</p>
+        {/* <p className={styles.title}>{app.currentUser?.profile.email}</p> */}
+        {/* <p className={styles.info}>{`App ID: ${app.id}`}</p> */}
       </div>
-      <button className={styles.button} onClick={logOut}>
+      <button className={styles.button} onClick={() => console.log('logout')}>
         Log out
       </button>
     </nav>
